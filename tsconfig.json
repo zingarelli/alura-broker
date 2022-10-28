@@ -1,0 +1,34 @@
+{
+    // configurações para compilador
+    "compilerOptions": {
+        // pasta em que serão salvos os arquivos TS compilados
+        "outDir": "app/dist/js",
+
+        // versão do ECMASCRIPT que será utilizada para conversão para JS
+        "target": "ES6",
+
+        // arquivo JS não será gerado se houver erro de compilação
+        "noEmitOnError": true,
+
+        // todas as variáveis precisarão ser tipadas
+        "noImplicitAny": true,
+
+        // não incluir os comentários no arquivo JS
+        "removeComments": true,
+
+        // verifica atribuições que podem ser nulas
+        "strictNullChecks": true,
+
+        // habilita o uso de decorators
+        "experimentalDecorators": true,
+
+        // possibilita debugar arquivos TS no navegador
+        "sourceMap": true
+    }, 
+
+    // informação de onde estão os arquivos a serem compilados
+    "include": [
+        // inclui todas as subpastas de app (**) e todos os arquivos dentro dela (*)
+        "app/src/**/*",
+    ]
+}
