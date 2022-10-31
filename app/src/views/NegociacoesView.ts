@@ -13,9 +13,9 @@ export class NegociacoesView extends View<ListaNegociacoes> {
         <table class="table table-hover table-bordered">
             <thead>
                 <tr>
-                    <th>DATA</th>
-                    <th>QUANTIDADE</th>
-                    <th>VALOR</th>
+                    <th>DATE</th>
+                    <th>AMOUNT</th>
+                    <th>PRICE PER STOCK</th>
                 </tr>
             </thead>
             <tbody>
