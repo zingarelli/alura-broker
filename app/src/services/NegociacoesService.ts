@@ -16,8 +16,8 @@ export class NegociacoesService {
                     // agora meu dado será do tipo Negociação
                     return new Negociacao(
                         new Date(),
-                        dadosDeHoje.valor,
-                        dadosDeHoje.quantidade
+                        dadosDeHoje.quantidade,
+                        dadosDeHoje.valor
                     );
                 });
             })
