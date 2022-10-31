@@ -1,6 +1,7 @@
 export class Negociacao {
-    constructor(_data, quantidade, valor) {
+    constructor(_data, simbolo, quantidade, valor) {
         this._data = _data;
+        this.simbolo = simbolo;
         this.quantidade = quantidade;
         this.valor = valor;
     }

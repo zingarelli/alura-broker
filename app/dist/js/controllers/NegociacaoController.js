@@ -35,9 +35,10 @@ export class NegociacaoController {
     }
     _criaNegociacao() {
         const data = new Date(this._inputData.value.replace('-', ','));
+        const simbolo = this._inputSimbolo.value;
         const qtde = parseInt(this._inputQtde.value);
         const valor = parseFloat(this._inputValor.value);
-        return new Negociacao(data, qtde, valor);
+        return new Negociacao(data, simbolo, qtde, valor);
     }
     _limpaForm() {
         this._inputData.value = '';
@@ -72,6 +73,9 @@ export class NegociacaoController {
 __decorate([
     DOMInjector('#data')
 ], NegociacaoController.prototype, "_inputData", void 0);
+__decorate([
+    DOMInjector('#simbolo')
+], NegociacaoController.prototype, "_inputSimbolo", void 0);
 __decorate([
     DOMInjector('#quantidade')
 ], NegociacaoController.prototype, "_inputQtde", void 0);

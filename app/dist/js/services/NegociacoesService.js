@@ -5,7 +5,7 @@ export class NegociacoesService {
             .then(res => res.json())
             .then((dados) => {
             return dados.map(dadosDeHoje => {
-                return new Negociacao(new Date(), dadosDeHoje.valor, dadosDeHoje.quantidade);
+                return new Negociacao(new Date(), dadosDeHoje.simbolo, dadosDeHoje.quantidade, dadosDeHoje.valor);
             });
         });
     }

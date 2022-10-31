@@ -14,8 +14,10 @@ export class NegociacoesView extends View<ListaNegociacoes> {
             <thead>
                 <tr>
                     <th>DATE</th>
+                    <th>STOCK SYMBOL</th>
                     <th>AMOUNT</th>
                     <th>PRICE PER STOCK</th>
+                    <th>TOTAL</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,8 +25,10 @@ export class NegociacoesView extends View<ListaNegociacoes> {
                     return `
                         <tr>
                             <td>${this._dataFormatada(negociacao.data)}</td>
+                            <td>${negociacao.simbolo}</td>
                             <td>${negociacao.quantidade}</td>
                             <td>${negociacao.valor}</td>
+                            <td>${negociacao.volume}</td>
                         </tr>
                     `;
                     // map retorna um array, então ao final fazemos

@@ -15,11 +15,15 @@ export class NegociacaoController {
     @DOMInjector('#data')
     private _inputData: HTMLInputElement;
 
+    @DOMInjector('#simbolo')
+    private _inputSimbolo: HTMLInputElement;
+
     @DOMInjector('#quantidade')
     private _inputQtde: HTMLInputElement;
 
     @DOMInjector('#valor')
     private _inputValor: HTMLInputElement;
+
     // quando dou um new, não é necessário tipar a variável, pois o TS vai entender que ela é do tipo 
     // com o qual a variável foi inicializada
     private _listaNegociacoes = new ListaNegociacoes();
@@ -71,10 +75,11 @@ export class NegociacaoController {
             mas o input retorna uma string no formato (aaaa-mm-dd), então precisamos alterar o separador
         */
             const data = new Date(this._inputData.value.replace('-', ','));
+            const simbolo = this._inputSimbolo.value;
             const qtde = parseInt(this._inputQtde.value);
             const valor = parseFloat(this._inputValor.value);
     
-            return new Negociacao(data, qtde, valor);
+            return new Negociacao(data, simbolo, qtde, valor);
     }
 
     // limpa o formulário para os valores padrão (que estão no index.html) e seta o focus na data

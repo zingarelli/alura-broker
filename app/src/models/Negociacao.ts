@@ -28,8 +28,9 @@ export class Negociacao implements Modelo<Negociacao>{
     constructor( 
         // continuará privada por ser de um tipo Date, que possui métodos setter próprios que podem modificar o atributo mesmo se fosse readonly
         private _data: Date,
+        public readonly simbolo: string,
         public readonly quantidade: number, 
-        public readonly valor:number
+        public readonly valor: number
     ) {}
 
     /*
